@@ -19,3 +19,11 @@ func _enter_tree():
 # warning-ignore:return_value_discarded
 	Fmod.load_bank("res://assets/Banks/Vehicles.bank", Fmod.FMOD_STUDIO_LOAD_BANK_NORMAL)
 	print("Fmod initialised.")
+
+
+func _on_reload_scene_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/FmodScriptTest.tscn")
+
+
+func _on_change_to_other_scene_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/OtherScene.tscn")
